@@ -1,0 +1,43 @@
+/* Cores e tipografia extraídas de mobile/src/global.css (monorepo
+   gradline) — accent institucional (navy da UFBA) e as fontes do app.
+   Ver docs/superpowers/specs/2026-09-03-docs-site-design.md para o
+   porquê desses valores serem "emprestados" antes do design-system
+   formal existir. */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Source+Code+Pro:wght@400&display=swap");
+
+:root {
+  --sl-color-accent-low: #dce1f7;
+  --sl-color-accent: #2b3a8f;
+  --sl-color-accent-high: #1c2760;
+  --sl-font: "Poppins", sans-serif;
+  --sl-font-mono: "Source Code Pro", monospace;
+}
+
+:root[data-theme="dark"] {
+  --sl-color-accent-low: #232d5c;
+  --sl-color-accent: #6478d1;
+  --sl-color-accent-high: #c2ccf2;
+}
+
+/* Home (template: splash) tem só o hero, sem imagem — o grid padrão do
+   Starlight reserva uma 2ª coluna pra imagem de hero (7fr texto / 4fr
+   imagem) a partir de 50rem, o que empurra o bloco de texto pra esquerda
+   mesmo com align-items: center. Sem imagem, força 1 coluna sempre, pra
+   o bloco realmente ocupar (e centralizar) a largura toda. */
+.hero {
+  grid-template-columns: 100% !important;
+}
+
+.hero .stack {
+  align-items: center;
+  text-align: center;
+}
+
+.hero .copy {
+  align-items: center;
+}
+
+.hero .actions {
+  justify-content: center;
+}
