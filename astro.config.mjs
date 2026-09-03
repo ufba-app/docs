@@ -10,7 +10,7 @@ export default defineConfig({
 
   integrations: [
     starlight({
-      title: "App UFBA - Docs",
+      title: "UFBA App - Docs",
       description:
         "Documentação do ecossistema ufba.app — arquitetura, integrações técnicas com SIGAA/Moodle/Classroom, modelo de dados e como contribuir.",
       logo: {
