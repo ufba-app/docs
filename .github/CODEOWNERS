@@ -1,0 +1,4 @@
+# Qualquer PR precisa de aprovação de um code owner antes de mergear na
+# main (aprovação → merge → deploy automático em produção via CI, ver
+# .github/workflows/deploy.yml).
+* @andreojr
