@@ -3,8 +3,11 @@ import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import starlightLlmsTxt from "starlight-llms-txt";
 
+import vercel from "@astrojs/vercel";
+
 export default defineConfig({
   site: "https://docs.ufba.app",
+
   integrations: [
     starlight({
       title: "ufba.app",
@@ -44,4 +47,6 @@ export default defineConfig({
       plugins: [starlightLlmsTxt()],
     }),
   ],
+
+  adapter: vercel(),
 });
